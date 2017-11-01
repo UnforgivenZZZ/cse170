@@ -1,0 +1,181 @@
+h3 {
+	text-align: center;
+	margin: 0px;
+	font-family: "Georgia", Times, serif;
+	font-size: 16px;
+	font-weight: 600;
+}
+input {
+	height: 20px;
+	font-size: 18px;
+	text-indent: 5px;
+	margin-bottom: 10px;
+}
+#category {
+	display: none;
+}
+button {
+	height: 40px;
+	background-color: #FFFFFF;
+	border: 1px #999999 solid;
+	border-radius: 3px;
+	font-size: 16px;
+	text-align: center;
+}
+button.home {
+	width: 80px;
+}
+#custom-cat-holder {
+	display: none;
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+}
+#custom-category {
+	font-size: 20px;
+	width: 250px;
+	height: 25px;
+}
+div.main {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#feedback-posts {
+	display: block;
+	height: 90px;
+	overflow: hidden;
+}
+div.feedback-post {
+	height: 20px;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-bottom: 1px #999999 solid;
+	overflow: hidden;
+	font-size: 14px;
+}
+p.feedback-post {
+	display: inline;
+	word-break: break-word;
+}
+img.feedback-icon {
+	display: inline;
+	margin-top: 2px;
+	height: 16px;
+}
+div.see-more {
+	position: absolute;
+	width: 90%;
+	margin: auto;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+p.advising_1 {
+	text-align: center;
+}
+div.advising_1 {
+	text-align: center;
+}
+div.dropdown-categories {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	width: 200px;
+}
+div.dropdown-content {
+	display: none;
+	width: 200px;
+	position: absolute;
+	border: 1px #999999 solid;
+	background-color: #FFFFFF;
+	margin-bottom: 5px;
+}
+div.dropped {
+	display: block;
+    background: solid;
+}
+div.dropdown-option {
+	text-align: center;
+	height: 30px;
+	border: none;
+	border-bottom: 1px #999999 solid;
+}
+div.dropdown-option:hover {
+	cursor: pointer;
+	background-color: #66A9F6;
+}
+#select {
+	width: 200px;
+	height; 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px #999999 solid;
+	font-size: 18px;
+	font-weight: 300;
+}
+#select:hover {
+	cursor: pointer;
+}
+#subject {
+	height: 28px;
+	text-align: center;
+	border: 1px #999999 solid;
+	border-radius: 3px;
+}
+#subject-div {
+	margin-top: 10px;
+	text-align: center;
+}
+table {
+	width: 90%;
+	vertical-align: top;
+}
+button:hover {
+	background-color: #BBBBBB;
+}
+#problem {
+	height: 100px;
+	border: 1px #999999 solid;
+	border-radius: 3px;
+	font-family: "Helvetica Neue" Arial sans-serif;
+}
+.text_1 {
+	margin-left: 10%;
+	width: 80%;
+	text-indent: 10px;
+	font-size: 16px;
+	resize: none;
+}
+#phone {
+	width: 150px;
+}
+#email {
+	width: 200px;
+}
+#submitter {
+	text-align: center;
+}
+#submit-div {
+	text-align: center;
+	margin: auto;
+}
+#submit {
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	background-color: #666666;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+div.response-msg {
+	height: 22px;
+	font-size: 16px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: hidden;
+	border-top: 1px #999999 solid;
+	border-bottom: 1px #999999 solid;
+	text-indent: 5px;
+}
