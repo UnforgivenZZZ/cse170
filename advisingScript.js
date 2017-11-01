@@ -1,3 +1,5 @@
+var feedbackHeight = $('#feedback-posts').height();
+
 var main = function () {
 	var slideSpeed = 200;
 	var dropped = false;
@@ -33,6 +35,28 @@ var main = function () {
 			$('#custom-category').val('');
 			$('#custom-cat-holder').slideUp(slideSpeed);
 		}
+	});
+	
+	//see more
+	function showMore() {
+		$('#feedback-posts').height('auto');
+		$('#see-more-button').text('See Less',function() {
+			$('#feedback-posts').addClass('show-more');
+		});
+	}
+	
+	function showLess() {
+		$('#feedback-posts').height(90);
+		$('#see-more-button').text('See More',function() {
+			$('#feedback-posts').removeClass('show-more');
+		});
+	}
+	
+	$(document).on('click','#see-more-button',function() {
+		if ($('#feedback-posts').hasClass('show-more')) {
+			showLess();
+		}
+		else showMore();
 	});
 	
 	//slideUp from wherever
