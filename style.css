@@ -50,6 +50,7 @@ td {
 }
 .dropdown {
 	position: relative;
+	cursor: pointer;
 }
 .selector {
 	margin: auto;
