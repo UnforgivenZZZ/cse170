@@ -9,6 +9,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="./js/navbar.js"></script>
 		<script src="./js/advisingScript.js"></script>
+		<script src="./js/link.js"></script>
 	</head>
 	<body>
 		<div id="navbar">
@@ -22,16 +23,16 @@
 						<div id="main-menu" class="dropdown">
 							<div id="main-select" class="selector">
 								<p class="select-txt">Conference Center</p>
-								<img class="select-icon" src="./select-arrows.png"/>
+								<img class="select-icon" src="./images-icons/select-arrows.png"/>
 							</div>
 							<div class="drop-menu">
-								<div class="drop-option">
+								<div class="drop-option link" href="grade.html">
 									Grades
 								</div>
-								<div class="drop-option">
+								<div class="drop-option link" href="parent_forum.html">
 									Parent Forum
 								</div>
-								<div class="drop-option">
+								<div class="drop-option link" href="find_tutor.html">
 									Find Tutor
 								</div>
 							</div>
@@ -40,12 +41,12 @@
 					<td id="td-right">
 						<div id="settings" class="dropdown">
 							<div class="selector">
-								<img src="./Settings Dots.png"/>
+								<img id="settings-icon" src="./images-icons/Settings Dots.png"/>
 							</div>
 							<div class="drop-menu">
-								<div class="drop-option">Change Settings</div>
-								<div class="drop-option">Different Student</div>
-								<div class="drop-option">Logout</div>
+								<div class="drop-option link" href="./setting.html">Change Settings</div>
+								<div class="drop-option link" href="./index.html">Different Student</div>
+								<div class="drop-option link" href="./login.html">Logout</div>
 							</div>
 						</div>
 					</td>
@@ -57,34 +58,34 @@
 			<div id="feedback">
 				<h3>Latest feedback on Julian:</h3>
 				<div id="feedback-posts">
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Star.png"/>
-					<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
-					a great understanding of the new phrases.</p>
-				</div>
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Star.png"/>
-					<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
-					a great understanding of the new phrases.</p>
-				</div>
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Exclamation.png"/>
-					<p class="feedback-post">AP Calculus: Came to class 20 minutes late.</p>
-				</div>
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Exclamation.png"/>
-					<p class="feedback-post">Spanish IV: Came 15 minutes late</p>
-				</div>
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Star.png"/>
-					<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
-					a great understanding of the new phrases.</p>
-				</div>
-				<div class="feedback-post">
-					<img class="feedback-icon" src="./Star.png"/>
-					<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
-					a great understanding of the new phrases.</p>
-				</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Star.png"/>
+						<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
+						a great understanding of the new phrases.</p>
+					</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Star.png"/>
+						<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
+						a great understanding of the new phrases.</p>
+					</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Exclamation.png"/>
+						<p class="feedback-post">AP Calculus: Came to class 20 minutes late.</p>
+					</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Exclamation.png"/>
+						<p class="feedback-post">Spanish IV: Came 15 minutes late</p>
+					</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Star.png"/>
+						<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
+						a great understanding of the new phrases.</p>
+					</div>
+					<div class="feedback-post">
+						<img class="feedback-icon" src="./images-icons/Star.png"/>
+						<p class="feedback-post">Spanish IV: Excellent job on the last in-class skit. Showed
+						a great understanding of the new phrases.</p>
+					</div>
 				</div>
 			</div>
 			<div class="see-more">
@@ -108,14 +109,22 @@
 					</div>
 				</div>
 				<div id="subject-div">
-					<input id="subject" name="subject" type="text" placeholder="Subject">
+					<input id="subject" name="subject" type="text" placeholder="Subject"></input>
 				</div>
 				<p class="advising_1">Please describe your problem:</p>
 				<textarea id="problem" name="problem" class="text_1" rows="15" wrap="soft" placeholder="Question"></textarea>
 				<br/>
-				<p>Receive Response Notification by:</p>
-				<input name="email" type="checkbox"><label>Email</label>
-				<input name="text" type="checkbox"><label>Text</label>
+				<input id="notification-input" name="notification-type" value="none"></input>
+				<br/>
+				<div id="notifications">
+					<p>Receive response notification by:</p>
+					<div id="email" class="notif unselected">
+						<p>Email</p>
+					</div>
+					<div id="text" class="notif unselected">
+						<p>Text</p>
+					</div>
+				</div>
 				<br/>
 				<div id="submit-div">
 					<button id="submit" type="submit">Submit</button>
@@ -124,14 +133,14 @@
 			<hr/>
 			<h3>Teacher Responses:</h3>
 			<a href="./teacherMessage.html">
-			<div class="response-msg">
-				<p>RE: Regrading homework 2</p>
-			</div>
+				<div class="response-msg">
+					<p>RE: Regrading homework 2</p>
+				</div>
 			</a>
 			<a href="./teacherMessage.html">
-			<div class="response-msg">
-				<p>RE: Doctor's appointment tomorrow</p>
-			</div>
+				<div class="response-msg">
+					<p>RE: Doctor's appointment tomorrow</p>
+				</div>
 			</a>
 		</div>
 		<footer>

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="./js/navbar.js"></script>
+		<script src="./js/link.js"></script>
 	</head>
 	<body>
 		<div id="navbar">
@@ -39,11 +40,11 @@
 					<td id="td-right">
 						<div id="settings" class="dropdown">
 							<div class="selector">
-								<img src="./images-icons/Settings Dots.png"/>
+								<img id="settings-icon" src="./images-icons/Settings Dots.png"/>
 							</div>
 							<div class="drop-menu">
-								<div class="drop-option">Change Settings</div>
-								<div class="drop-option">Logout</div>
+								<div class="drop-option link" href="./setting.html">Change Settings</div>
+								<div class="drop-option link" href="./login.html">Logout</div>
 							</div>
 						</div>
 					</td>
@@ -56,20 +57,16 @@
 				<a href="./conference.html">
 				<div class="center-option">
 					<p class="center-txt">Conference Center</p>
-					<img class="arrow-icon" src="./images-icons/arrow-right.png"/>
 				</div>
 				</a>
 				<div class="center-option">
 					<p class="center-txt">Grades</p>
-					<img class="arrow-icon" src="./images-icons/arrow-right.png"/>
 				</div>
 				<div class="center-option">
 					<p class="center-txt">Parent Forum</p>
-					<img class="arrow-icon" src="./images-icons/arrow-right.png"/>
 				</div>
 				<div class="center-option">
 					<p class="center-txt">Find a Tutor</p>
-					<img class="arrow-icon" src="./images-icons/arrow-right.png"/>
 				</div>
 			</div>
 		</div>

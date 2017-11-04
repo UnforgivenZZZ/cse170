@@ -1,9 +1,8 @@
-var feedbackHeight = $('#feedback-posts').height();
-
 var main = function () {
 	var slideSpeed = 200;
 	var dropped = false;
 	var category = "";
+	var feedbackHeight = $('#feedback-posts').height();
 	
 	//alerts
 	var alert1 = "Please choose a category for your question.\n";
@@ -22,7 +21,7 @@ var main = function () {
 		var newText = $(this).text();
 		category = newText;
 		$('input[name="category"]').val(category);
-		$('#select').text(newText);
+		$('#select').children('p').text(newText);
 		$('.dropdown-content').slideUp(slideSpeed,function() {
 			dropped = false;
 		});
@@ -40,16 +39,15 @@ var main = function () {
 	//see more
 	function showMore() {
 		$('#feedback-posts').height('auto');
-		$('#see-more-button').text('See Less',function() {
-			$('#feedback-posts').addClass('show-more');
-		});
+		$('#see-more-button').text('See Less');
+		$('#feedback-posts').addClass('show-more');
 	}
 	
 	function showLess() {
-		$('#feedback-posts').height(90);
-		$('#see-more-button').text('See More',function() {
-			$('#feedback-posts').removeClass('show-more');
-		});
+		//$('#feedback-posts').height('90px');
+		$('#feedback-posts').css('height',feedbackHeight);
+		$('#see-more-button').text('See More');
+		$('#feedback-posts').removeClass('show-more');
 	}
 	
 	$(document).on('click','#see-more-button',function() {
@@ -68,23 +66,23 @@ var main = function () {
 		}
 	});
 	
-	$(document).on('submit','#main-form',function() {
-		var alertText = "";
-		if ($('input[name="category"]').val() == 'none') {
-			alertText += alert1;
-		}
-		if ($('#problem').val() == '') {
-			alertText += alert2;
-		}
-		if ($('#phone').val() == "" && $('#email').val() == "") {
-			alertText += alert3;
-		}
-		
-		if (alertText != "") {//-----denies submission unless user has filled out all info
-			alert(alertText);
-			return false;
-		}
+	$(document).on('click','.notif',function() {
+		$(this).toggleClass("selected");
+		$(this).toggleClass("unselected");
+				
+		if ($('#email').hasClass('selected') && $('#text').hasClass('selected'))
+			$('input[name="notification-type"]').val('both');
+		else if ($('#email').hasClass('selected'))
+			$('input[name="notification-type"]').val('email');
+		else if ($('#text').hasClass('selected'))
+			$('input[name="notification-type"]').val('text');
+		else $('input[name="notification-type"]').val('none');
 	});
+	
+	/*Tester for notification type selector
+	$(document).on('submit','#main-form',function() {
+		alert($('input[name="notification-type"]').val());
+	});*/
 };
 
 $(document).ready(main);

@@ -1,15 +1,19 @@
 h3 {
 	text-align: center;
 	margin: 0px;
+	padding: 2px;
 	font-family: "Georgia", Times, serif;
-	font-size: 16px;
+	font-size: 42px;
 	font-weight: 600;
 }
-input {
-	height: 20px;
-	font-size: 18px;
+input[type='text'] {
+	height: 32px;
+	font-size: 28px;
 	text-indent: 5px;
 	margin-bottom: 10px;
+}
+input[type="checkbox"] {
+	width: 20px;
 }
 #category {
 	display: none;
@@ -18,7 +22,7 @@ button {
 	height: 40px;
 	background-color: #FFFFFF;
 	border: 1px #999999 solid;
-	border-radius: 3px;
+	border-radius: 8px;
 	font-size: 16px;
 	text-align: center;
 }
@@ -36,23 +40,20 @@ button.home {
 	width: 250px;
 	height: 25px;
 }
-div.main {
-	margin-left: 10px;
-	margin-right: 10px;
-}
 #feedback-posts {
 	display: block;
-	height: 90px;
+	height: 228px;
 	overflow: hidden;
 }
 div.feedback-post {
-	height: 20px;
+	height: 66px;
 	vertical-align: top;
 	margin-left: 20px;
 	margin-right: 20px;
 	border-bottom: 1px #999999 solid;
 	overflow: hidden;
 	font-size: 14px;
+	padding: 4px;
 }
 p.feedback-post {
 	display: inline;
@@ -60,17 +61,22 @@ p.feedback-post {
 }
 img.feedback-icon {
 	display: inline;
-	margin-top: 2px;
-	height: 16px;
+	margin-left: 2px;
+	margin-right: 6px;
+	height: 36px;
 }
 div.see-more {
-	position: absolute;
+	position: relative;
 	width: 90%;
 	margin: auto;
 	background-color: #FFFFFF;
 	text-align: center;
-	font-size: 14px;
+	font-weight: 600;
 	cursor: pointer;
+}
+#see-more-button {
+	font-size: 42px;
+	padding: 5px;
 }
 p.advising_1 {
 	text-align: center;
@@ -82,13 +88,17 @@ div.dropdown-categories {
 	position: relative;
 	text-align: center;
 	margin: auto;
-	width: 200px;
+	min-width: 200px;
+	width: 80%;
 }
 div.dropdown-content {
 	display: none;
-	width: 200px;
+	min-width: 200px;
+	width: 100%;
+	margin: auto;
 	position: absolute;
 	border: 1px #999999 solid;
+	border-radius: 8px;
 	background-color: #FFFFFF;
 	margin-bottom: 5px;
 }
@@ -98,7 +108,9 @@ div.dropped {
 }
 div.dropdown-option {
 	text-align: center;
-	height: 30px;
+	padding: 5px;
+	height: 68px;
+	overflow: hidden;
 	border: none;
 	border-bottom: 1px #999999 solid;
 }
@@ -107,22 +119,32 @@ div.dropdown-option:hover {
 	background-color: #66A9F6;
 }
 #select {
-	width: 200px;
-	height; 20px;
+	min-width: 200px;
+	padding: 5px;
+	height: 68px;
+	margin: auto;
 	text-align: center;
 	background-color: #FFFFFF;
 	border: 1px #999999 solid;
-	font-size: 18px;
+	border-radius: 8px;
+	font-size: 32px;
 	font-weight: 300;
+	overflow: hidden;
+	p {
+		font-size: 36px;
+	}
 }
 #select:hover {
 	cursor: pointer;
 }
 #subject {
-	height: 28px;
+	font-size: 52px;
+	font-weight: 200;
+	height: auto;
 	text-align: center;
 	border: 1px #999999 solid;
-	border-radius: 3px;
+	border-radius: 8px;
+	margin-top: 20px;
 }
 #subject-div {
 	margin-top: 10px;
@@ -135,24 +157,16 @@ table {
 button:hover {
 	background-color: #BBBBBB;
 }
-#problem {
-	height: 100px;
-	border: 1px #999999 solid;
-	border-radius: 3px;
-	font-family: "Helvetica Neue" Arial sans-serif;
-}
 .text_1 {
 	margin-left: 10%;
 	width: 80%;
+	height: 400px;
 	text-indent: 10px;
-	font-size: 16px;
+	font-size: 48px;
+	font-weight: 400;
 	resize: none;
-}
-#phone {
-	width: 150px;
-}
-#email {
-	width: 200px;
+	border: 1px #999999 solid;
+	border-radius: 8px;
 }
 #submitter {
 	text-align: center;
@@ -162,20 +176,49 @@ button:hover {
 	margin: auto;
 }
 #submit {
-	width: 150px;
-	font-size: 18px;
+	width: 260px;
+	height: auto;
+	font-size: 58px;
 	font-weight: 600;
 	background-color: #666666;
+	background: -webkit-radial-gradient(#666666,#777777);
 	color: #FFFFFF;
 	cursor: pointer;
 }
 div.response-msg {
-	height: 22px;
-	font-size: 16px;
+	height: auto;
 	margin-left: 20px;
 	margin-right: 20px;
 	overflow: hidden;
 	border-top: 1px #999999 solid;
 	border-bottom: 1px #999999 solid;
 	text-indent: 5px;
+}
+#notifications {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.notif {
+	display: inline-block;
+	padding: 10px;
+	width: 200px;
+	height: auto;
+	margin: 5px;
+	font-size: 52px;
+	font-weight: 600;
+	border: 1px #999999 solid;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.selected {
+	background-color: #0000FF;
+	color: #FFFFFF;
+}
+.unselected {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+#notification-input {
+	display: none;
 }
